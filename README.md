@@ -94,7 +94,7 @@ Quantum State
       ↓
 Similarity Calculation
       ↓
-SVM
+     SVM
       ↓
 Prediction
 ```
