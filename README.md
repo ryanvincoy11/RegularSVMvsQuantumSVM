@@ -68,7 +68,7 @@ Quantum Feature Map
     ↓
 Quantum Kernel
     ↓
-SVM
+   SVM
     ↓
 Prediction
 ```
