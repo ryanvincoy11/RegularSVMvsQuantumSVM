@@ -35,22 +35,24 @@ start = time.perf_counter()
 model.fit(X_train, y_train)
 
 end = time.perf_counter()
-training_time = end - start
+classic_training_time = end - start
 
 predictions = model.predict(X_test)
 
-accuracy = accuracy_score(y_test, predictions)
+classic_accuracy = accuracy_score(y_test, predictions)
 
-print(f"Classical Accuracy: {accuracy:.4f}")
+#print(f"Classical Accuracy: {classic_accuracy:.4f}")
 
-print("/nConfusion Matrix:")
-print(confusion_matrix(y_test, predictions))
+#print("\nConfusion Matrix:")
+classic_conf_matrix = confusion_matrix(y_test, predictions)
+#print(classic_conf_matrix)
 
-print("\nClassification Report:")
-print(classification_report(
+#print("\nClassification Report:")
+classic_report = classification_report(
 y_test,
 predictions,
 target_names=iris.target_names
-))
+)
+#print(classic_report)
 
-print(f"Training Time: {training_time:.4f} seconds")
+#print(f"Training Time: {classic_training_time:.4f} seconds")

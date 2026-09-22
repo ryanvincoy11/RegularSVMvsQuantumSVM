@@ -50,22 +50,24 @@ start = time.perf_counter()
 model.fit(X_train, y_train)
 
 end = time.perf_counter()
-training_time = end - start
+quantum_training_time = end - start
 
 predictions = model.predict(X_test)
 
-accuracy = accuracy_score(y_test, predictions)
+quantum_accuracy = accuracy_score(y_test, predictions)
 
-print(f"Quantum Accuracy: {accuracy:.4f}")
+#print(f"Quantum Accuracy: {quantum_accuracy:.4f}")
 
-print("/nConfusion Matrix:")
-print(confusion_matrix(y_test, predictions))
+#print("\nConfusion Matrix:")
+quantum_conf_matrix = confusion_matrix(y_test, predictions)
+#print(quantum_conf_matrix)
 
-print("\nClassification Report:")
-print(classification_report(
+#print("\nClassification Report:")
+quantum_report = classification_report(
 y_test,
 predictions,
 target_names=iris.target_names
-))
+)
+#print(quantum_report)
 
-print(f"Training Time: {training_time:.4f} seconds")
+#print(f"Training Time: {quantum_training_time:.4f} seconds")
